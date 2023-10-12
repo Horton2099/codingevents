@@ -2,12 +2,16 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8"/>
-    <title></title>
+    <title>Coding Events</title>
 </head>
 <body>
 <h1>Events!</h1>
-<ol>
-    <li th:each="event : ${eventList}" th:text="${event}"></li>
-</ol>
+<ul>
+
+    <th:block th:each="eventName : ${events}">
+        <li th:text="${eventName}"></li>
+    </th:block>
+</ul>
+<a href="/events/create">Create Another Event</a>
 </body>
 </html>
