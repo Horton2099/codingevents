@@ -2,6 +2,7 @@ package org.launchcode.codingevents.models;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;
 
 import java.util.Objects;
@@ -15,6 +16,10 @@ public class Event {
     private String name;
     @Size(max = 500, message = "Description too long.")
     private String description;
+    @NotBlank(message="Location cannot be left blank.")
+    private String location;
+    @Positive(message="Number of attendees must be one or more.")
+    private int numberOfAttendees;
     @NotBlank
     @Email(message = "Invalid email. Try again.")
     private String contactEmail;
