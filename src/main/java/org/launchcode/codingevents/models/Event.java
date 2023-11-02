@@ -3,9 +3,7 @@ package org.launchcode.codingevents.models;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import jakarta.persistence.*;
 import java.util.Objects;
 @Entity
 public class Event{
@@ -29,7 +27,6 @@ public class Event{
         this.description = description;
         this.contactEmail = contactEmail;
         this.type = type;
-
     }
 
     public Event() {}
